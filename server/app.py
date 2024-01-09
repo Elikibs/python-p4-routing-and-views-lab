@@ -4,10 +4,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# running the app as a python script
-if __name__ == '__main__':
-    app.run(port=5555, debug=True)
-
 # index base route and view
 @app.route('/')
 def index():
@@ -40,3 +36,7 @@ def math(num1, operation, num2):
     else:
         return "Invalid operation"
     return f'{num1} {operation} {num2} = {result}'
+
+# running the app as a python script
+if __name__ == '__main__':
+    app.run(port=5555, debug=True)
